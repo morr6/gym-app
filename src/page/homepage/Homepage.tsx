@@ -3,7 +3,7 @@ import React from 'react'
 export const Homepage = () => {
   return (
     <div>
-      Homepage
+      Homepage1
     </div>
   )
 }
