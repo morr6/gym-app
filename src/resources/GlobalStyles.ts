@@ -9,6 +9,7 @@ export default createGlobalStyle`
   
   html, body, #root, .App {
     height: 100%;
+    overflow: hidden;
   }
     
   body {

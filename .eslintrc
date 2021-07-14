@@ -39,6 +39,16 @@
     "linebreak-style": 0,
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": 0,
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "react/prop-types": 0,
+    "no-param-reassign": ["error", {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "state"
+        ]
+      }],
+    "import/prefer-default-export": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-vars": "warn"
   }
 }

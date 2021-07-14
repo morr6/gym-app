@@ -1,5 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 
-// const store = configureStore({})
+import exercisesReducer from '../page/exercises/exercisesReducer';
 
-// export default store
+const store = configureStore({
+    reducer: {
+        main: exercisesReducer,
+    },
+});
+
+export default store;

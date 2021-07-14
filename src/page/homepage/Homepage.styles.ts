@@ -29,7 +29,7 @@ export const MiddleLine = styled.div`
   margin: auto;
   
   opacity: 0.5;
-  background-color: ${color.grey}
+  background-color: ${color.white}
 `;
 
 export const LinksWrapper = styled.div`
