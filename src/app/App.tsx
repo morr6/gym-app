@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import './App.css';
 
 import MainRouter from '../page/router/MainRouter'
 
