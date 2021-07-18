@@ -24,7 +24,7 @@ export const AddCategoryButton = styled.button`
 export const ListWrapper = styled.div`
     padding: 1rem 2rem;
     font-size: 5rem;
-    max-height: 75%;
+    max-height: 90%;
     overflow: scroll;
 `;
 

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import variables from '../../../resources/variables';
+import variables from '../../../../../resources/variables';
 
 const { color, button } = variables;
 
-export const Item = styled.div`
+export const Container = styled.div`
     transition: 0.5s;
 
     width: 100%;
@@ -17,10 +17,12 @@ export const Item = styled.div`
     box-shadow: ${button.boxShadow};
     background: ${color.lightBlack};
     border-radius: 5px;
+    overflow: hidden;
 `;
 
-export const Wrapper = styled.div`
+export const HeaderWrapper = styled.div`
     height: 30px;
+    margin-bottom: 1rem;
 
     display: flex;
     justify-content: space-between;
@@ -28,16 +30,23 @@ export const Wrapper = styled.div`
 `;
 
 export const CategoryNameWrapper = styled.div`
+    display: flex;
+    align-items: center;
+
     width: 65%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 `;
 
+export const CategoryAvatar = styled.img`
+    width: 3rem;
+    height: 3rem;
+`;
+
 export const CategoryName = styled.span`
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-left: 1rem;
-    max-width: 1%;
 `;
 
 export const ButtonsWrapper = styled.div`
@@ -46,4 +55,14 @@ export const ButtonsWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+`;
+
+export const CustomUL = styled.ul`
+    padding: 0;
+`;
+
+export const CustomLI = styled.li`
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    border-bottom: ${({ isLast }: {isLast?: boolean}) => (isLast ? 'none' : `1px solid ${color.transparentWhite}`)}
 `;

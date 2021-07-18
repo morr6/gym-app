@@ -1,8 +1,11 @@
-const color: Record<string, string> = {
+const color = {
     black: '#070707',
     lightBlack: '#1a1a1a',
-    white: '#f2f2f2',
+
     grey: '#DDD',
+
+    transparentWhite: 'rgba(221, 221, 221, 0.5)',
+    white: '#f2f2f2',
 };
 
 export const button = {

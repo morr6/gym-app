@@ -5,6 +5,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     margin: 0;
+    list-style-type: none;
   }
   
   html, body, #root, .App {

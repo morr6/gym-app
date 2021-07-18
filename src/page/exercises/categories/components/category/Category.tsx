@@ -1,5 +1,4 @@
-import { FC, useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { FC, useState } from 'react';
 
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -7,40 +6,27 @@ import CreateIcon from '@material-ui/icons/Create';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 import {
-    Item,
-    Wrapper,
+    Container,
+    HeaderWrapper,
     CategoryNameWrapper,
+    CategoryAvatar,
     CategoryName,
     ButtonsWrapper,
-} from './Exercises.styles';
+    CustomUL,
+    CustomLI,
+} from './Category.styles';
 
-import { exercisesStateRoot, TStore } from './ExercisesSlice';
-import { getCategoryExercises } from './ExercisesActions';
+import { TCategory } from '../../../types';
 
-type TProps = {
-    item: {
-        id: number;
-        name: string;
-        avatar: string;
-    }
-}
+type TProps = { item: TCategory }
 
-export const ListItem: FC<TProps> = ({ item: { name, avatar, id } }) => {
-    const dispatch = useDispatch();
-
+export const Category: FC<TProps> = ({ item: { name, exercises } }) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const exercises = useSelector((state: TStore) => exercisesStateRoot(state));
-
-    useEffect(() => {
-        dispatch(getCategoryExercises());
-    }, [id]);
-
     return (
-        <Item isOpen={isOpen}>
-            <Wrapper>
+        <Container isOpen={isOpen}>
+            <HeaderWrapper>
                 <CategoryNameWrapper>
-                    <img src={avatar} alt="avatar" />
                     <CategoryName>{name}</CategoryName>
                 </CategoryNameWrapper>
 
@@ -67,9 +53,17 @@ export const ListItem: FC<TProps> = ({ item: { name, avatar, id } }) => {
                         />
                     )}
                 </ButtonsWrapper>
-            </Wrapper>
-        </Item>
+            </HeaderWrapper>
+
+            <CustomUL>
+                {exercises.map((exercise, index) => (
+                    <CustomLI isLast={index === exercises.length - 1}>
+                        {exercise.name}
+                    </CustomLI>
+                ))}
+            </CustomUL>
+        </Container>
     );
 };
 
-export default ListItem;
+export default Category;

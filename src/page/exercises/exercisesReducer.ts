@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
-import exercisesReducer from './exercises/ExercisesSlice';
+import categoriesReducer from './categories/CategoriesSlice';
+import modalReducer from './modal/ModalSlice';
 
 export default combineReducers({
-    exercises: exercisesReducer,
+    categories: categoriesReducer,
+    modal: modalReducer,
 });

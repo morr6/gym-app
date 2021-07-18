@@ -11,7 +11,7 @@ export const Container = styled.div`
   
   position: relative; 
   height: 100%;
-  padding: 15%;
+  padding: 15% 10%;
   color: red;
 `;
 
@@ -48,10 +48,12 @@ export const CustomLink = styled(Link)`
   border: none;
   border-bottom: ${({ noBorder }: { noBorder?: boolean }) => (noBorder
         ? 'none'
-        : '1px solid rgba(221, 221, 221, 0.5)')};
+        : `1px solid ${color.transparentWhite}`)};
 
   color: ${color.white};
   font-size: 1.5rem;
+
+  padding: 0 1rem;
 
   width: calc(50% - 0.5px);
   height: 150px
