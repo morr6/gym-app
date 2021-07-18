@@ -35,11 +35,11 @@ export const Category: FC<TProps> = ({ item: { name, exercises } }) => {
                         style={{ fontSize: 15 }}
                     />
                     <CreateIcon
-                        onClick={() => console.log('edit')}
+                        // onClick={() => console.log('edit')}
                         style={{ fontSize: 15, marginLeft: '10px' }}
                     />
                     <DeleteIcon
-                        onClick={() => console.log('delete')}
+                        // onClick={() => console.log('delete')}
                         style={{ fontSize: 15, marginLeft: '10px' }}
                     />
                     {!!exercises?.length && (
